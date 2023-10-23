@@ -15,7 +15,9 @@ export function Header(){
                 <h1 className="hover:text-neutral-400 duration-200 cursor-pointer font-bold text-2xl">Redux Shopping</h1>
             </Link>
             <div className="actions text-lg flex items-center gap-4">
-                <p className="hover:text-neutral-400 duration-200 cursor-pointer">Login</p>
+                <Link href={"/login"}>
+                    <p className="hover:text-neutral-400 duration-200 cursor-pointer">Login</p>
+                </Link>
                 <ShoppingCartIcon onClick={() => setIsCartOpen(!isCartOpen)} className="hover:text-neutral-400 duration-200 cursor-pointer" width={25}/>
             </div>
             <If condition={isCartOpen}>
