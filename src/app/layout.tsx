@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Header/>
-      <body className='mt-20'>{children}</body>
+      <body className='mt-20 mb-10'>{children}</body>
       <footer></footer>
     </html>
   )
