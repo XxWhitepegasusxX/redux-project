@@ -1,13 +1,12 @@
 "use client"
 import React, { useState } from 'react'
 import { logIn } from "@/redux/features/auth-slice"
-import { useAppDispatch, useAppSelector } from '@/redux/store'
+import { useAppDispatch } from '@/redux/store'
 import Link from 'next/link'
 
 function Login() {
   const [username, setUsername] = useState<string>("")
   const dispatch = useAppDispatch()
-  const name = useAppSelector(state => state.authReducer.value.username)
 
   const handleLogin = () => {
     dispatch(logIn(username))
