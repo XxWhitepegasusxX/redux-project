@@ -1,6 +1,7 @@
 import { add } from "@/redux/features/cart-slice";
 import { useAppDispatch } from "@/redux/store";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import toast from "react-hot-toast";
 
 interface ProductCardProps{
     id: string;
@@ -15,6 +16,7 @@ export function ProductCard({id, name, price, imageUrl}: ProductCardProps){
     const item: ProductCardProps = {id, name, price, imageUrl}
 
     const handleAddToCart = () => {
+        toast.success("Item adicionado ao carrinho!")
         dispatch(add(item))
     }
 

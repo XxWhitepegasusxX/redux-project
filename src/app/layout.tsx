@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { ReduxProvider } from '@/redux/provider'
+import { Toaster } from 'react-hot-toast'
 
 export const metadata: Metadata = {
   title: 'Redux Shopping',
@@ -13,9 +14,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-      <html lang="en">
+      <html lang="pt-br">
         <body>
           <ReduxProvider>
+            <Toaster/>
             {children}
           </ReduxProvider>
         </body>
